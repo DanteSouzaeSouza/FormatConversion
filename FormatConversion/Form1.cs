@@ -37,11 +37,20 @@ namespace FormatConversion
 
         private void btnConverte_Click(object sender, EventArgs e)
         {
-            double numDigitado = double.Parse(txtNumero.Text);
-            Console.WriteLine(numDigitado);
-            int numConvertido = (int)numDigitado;
-            Console.WriteLine(numConvertido);
-            lblConvertido.Text = numConvertido.ToString();
+
+            //falta ver se está vazio
+            if (txtNumero.Text != ""){
+
+                double numDigitado = double.Parse(txtNumero.Text);
+                Console.WriteLine(numDigitado);
+
+                int numConvertido = (int)numDigitado;
+                Console.WriteLine(numConvertido);
+
+                lblConvertido.Text = numConvertido.ToString();
+            } else {
+                MessageBox.Show("Digite um número!!");
+            }
         }
     }
 }

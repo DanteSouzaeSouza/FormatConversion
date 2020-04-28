@@ -37,18 +37,35 @@ namespace FormatConversion
 
         private void btnConverte_Click(object sender, EventArgs e)
         {
-
-            //falta ver se está vazio
             if (txtNumero.Text != ""){
+                // fazer essas tarefas:
 
+                /* Capturando o valor do campo txtNumero, convertendo em double
+                 * e colocando na variável numDigitado */
                 double numDigitado = double.Parse(txtNumero.Text);
+
+
+                /* pedindo ao programa para escrever no Output 
+                 *  o valor da variável numDigitado */
                 Console.WriteLine(numDigitado);
 
+
+                /* Convertendo o valor da variável numDigitado em int
+                 * e colocando esse valor convertido na variável numConvertido */
                 int numConvertido = (int)numDigitado;
+
+                /* pedindo ao programa para escrever no Output
+                 *  o valor da variável numDigitado */
                 Console.WriteLine(numConvertido);
 
+                /* copiando o valor da variável num Convertido em forma 
+                 * de texto para o objeto do form lblConvertido */
                 lblConvertido.Text = numConvertido.ToString();
+
             } else {
+                // fazer essas tarefas:
+
+                /* Mostrar uma mensagem se não houver número digitado */
                 MessageBox.Show("Digite um número!!");
             }
         }
